@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SatinAlmaContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MUH_SATINALMA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SUBEID" Type="int" />
+          <Property Name="TARIH" Type="datetime" />
+          <Property Name="DEPOID" Type="int" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="ENO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACIKLAMA" Type="nvarchar" MaxLength="250" />
+          <Property Name="EK1" Type="nvarchar" MaxLength="50" />
+          <Property Name="EK2" Type="nvarchar" MaxLength="50" />
+          <Property Name="DURUMID" Type="int" />
+          <Property Name="IPTAL" Type="bit" />
+          <Property Name="KALEMADET" Type="int" />
+          <Property Name="TOPLAMTUTAR" Type="float" />
+          <Property Name="TRANSFERFISIKESILDI" Type="bit" />
+          <Property Name="STATUID" Type="int" />
+          <Property Name="MERKEZIONAY" Type="bit" />
+          <Property Name="SONONAYACIKLAMA" Type="nvarchar" MaxLength="100" />
+          <Property Name="GERIGONDERILDI" Type="bit" />
+          <Property Name="DEPARTMANLAR" Type="nvarchar" MaxLength="200" />
+          <Property Name="LIMITKONTROL" Type="int" />
+          <Property Name="TENANTID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KODU" Type="nvarchar" MaxLength="100" />
+          <Property Name="ADI" Type="nvarchar" MaxLength="30" />
+          <Property Name="GOREVI" Type="nvarchar" MaxLength="50" />
+          <Property Name="DEPT" Type="nvarchar" MaxLength="15" />
+          <Property Name="SIFRESI" Type="nvarchar" MaxLength="100" />
+          <Property Name="DIL" Type="nvarchar" MaxLength="15" />
+          <Property Name="GRUBU" Type="nvarchar" MaxLength="15" />
+          <Property Name="ONBURO" Type="int" />
+          <Property Name="STOK" Type="int" />
+          <Property Name="SANTRAL" Type="int" />
+          <Property Name="POS" Type="int" />
+          <Property Name="WINTOM" Type="int" />
+          <Property Name="MUHASEBE" Type="int" />
+          <Property Name="YETKISI" Type="int" />
+          <Property Name="PERSONEL" Type="int" />
+          <Property Name="SKODU" Type="nvarchar" MaxLength="100" />
+          <Property Name="YGRUBU" Type="bit" />
+          <Property Name="RAPORLAR" Type="int" />
+          <Property Name="ETSGIRISIZNI" Type="int" />
+          <Property Name="SUBEID" Type="int" />
+          <Property Name="DEPOID" Type="int" />
+          <Property Name="ETS" Type="int" />
+          <Property Name="SATINALMA" Type="int" />
+          <Property Name="TICSET" Type="int" />
+          <Property Name="MEDISOFT" Type="int" />
+          <Property Name="YETKISIOTEL" Type="int" />
+          <Property Name="YETKISIPOS" Type="int" />
+          <Property Name="YETKISIETS" Type="int" />
+          <Property Name="YETKISIPERSONEL" Type="int" />
+          <Property Name="YETKISIMEDISOFT" Type="int" />
+          <Property Name="HAZIRLAMA" Type="int" />
+          <Property Name="KONTROLETME" Type="int" />
+          <Property Name="ONAYLAMA" Type="int" />
+          <Property Name="SATGOREV" Type="nvarchar" MaxLength="20" />
+          <Property Name="SIFRESIFRELI" Type="bit" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+          <Property Name="MUHONAY" Type="int" />
+          <Property Name="USERGRUPID" Type="int" />
+          <Property Name="SATINALMADURUM" Type="nvarchar" MaxLength="250" />
+          <Property Name="MASMERID" Type="int" />
+          <Property Name="SABAGIMSIZGERIGONDER" Type="int" />
+          <Property Name="TAKVIMKAYNAK" Type="nvarchar" MaxLength="250" />
+          <Property Name="GELIRLERIGOREMEZ" Type="bit" />
+          <Property Name="DEPARTID" Type="int" />
+          <Property Name="SATINALMASTATU" Type="nvarchar" MaxLength="100" />
+          <Property Name="COKLUCALISMA" Type="int" />
+          <Property Name="PDEPARTMANS" Type="nvarchar" MaxLength="100" />
+          <Property Name="ETSISLEMLER" Type="int" />
+          <Property Name="ETSFATURA" Type="int" />
+          <Property Name="ETSDEMIRBAS" Type="int" />
+          <Property Name="ETSDEVREMULK" Type="int" />
+          <Property Name="ETSENTEGRASYON" Type="int" />
+          <Property Name="ETSSATISPAZARLAMA" Type="int" />
+          <Property Name="OTELMENU" Type="nvarchar" MaxLength="250" />
+          <Property Name="PASIF" Type="bit" />
+          <Property Name="EFATURA_KULLANICI" Type="nvarchar" MaxLength="50" />
+          <Property Name="EFATURA_PAROLA" Type="nvarchar" MaxLength="50" />
+          <Property Name="EARSIV_KULLANICI" Type="nvarchar" MaxLength="50" />
+          <Property Name="EARSIV_PAROLA" Type="nvarchar" MaxLength="50" />
+          <Property Name="SATINALMAMAXLIMIT" Type="float" />
+          <Property Name="DEPOKODU" Type="nvarchar" MaxLength="100" />
+          <Property Name="FIRMA" Type="int" />
+          <Property Name="FATURA" Type="int" />
+          <Property Name="TENANTID" Type="int" Nullable="false" />
+          <Property Name="ESIFRESI" Type="nvarchar" MaxLength="50" />
+          <Property Name="MASRAFMERKEZLERI" Type="nvarchar" MaxLength="500" />
+          <Property Name="OZELKODLAR" Type="nvarchar" MaxLength="500" />
+          <Property Name="KOTAONAYCI" Type="bit" />
+          <Property Name="KOTASAHIBI" Type="bit" />
+          <Property Name="ADD_USERID" Type="int" />
+          <Property Name="ADD_DATE" Type="datetime" />
+          <Property Name="EIRSALIYE_KULLANICI" Type="nvarchar" MaxLength="50" />
+          <Property Name="EIRSALIYE_PAROLA" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="USER_TAKVIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ActualFinish" Type="int" />
+          <Property Name="ActualStart" Type="int" />
+          <Property Name="Caption" Type="nvarchar" MaxLength="255" />
+          <Property Name="EventType" Type="int" />
+          <Property Name="Finish" Type="datetime" />
+          <Property Name="LabelColor" Type="int" />
+          <Property Name="Location" Type="nvarchar" MaxLength="255" />
+          <Property Name="Message" Type="nvarchar" MaxLength="255" />
+          <Property Name="Options" Type="int" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="RecurrenceIndex" Type="int" />
+          <Property Name="RecurrenceInfo" Type="ntext" />
+          <Property Name="ReminderDate" Type="datetime" />
+          <Property Name="ReminderMinutesBeforeStart" Type="int" />
+          <Property Name="ReminderResourcesData" Type="ntext" />
+          <Property Name="ResourceID" Type="ntext" />
+          <Property Name="Start" Type="datetime" />
+          <Property Name="State" Type="int" />
+          <Property Name="TaskCompleteField" Type="int" />
+          <Property Name="TaskIndexField" Type="int" />
+          <Property Name="TaskLinksField" Type="ntext" />
+          <Property Name="TaskStatusField" Type="int" />
+          <Property Name="isNew" Type="bit" />
+          <Property Name="FirmaId" Type="int" />
+          <Property Name="ProjeId" Type="int" />
+        </EntityType>
+        <EntityType Name="USERD">
+          <Key>
+            <PropertyRef Name="USERDID" />
+          </Key>
+          <Property Name="USERDID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="FGRUBU" Type="nvarchar" MaxLength="15" />
+          <Property Name="KODU" Type="nvarchar" MaxLength="15" />
+          <Property Name="FORM" Type="nvarchar" MaxLength="100" />
+          <Property Name="GORUNTULE" Type="bit" />
+          <Property Name="LISTE" Type="bit" />
+          <Property Name="EKLE" Type="bit" />
+          <Property Name="YENILE" Type="bit" />
+          <Property Name="SIL" Type="bit" />
+          <Property Name="SEC" Type="bit" />
+          <Property Name="COGALT" Type="bit" />
+          <Property Name="YAZDIR" Type="bit" />
+          <Property Name="DETAY" Type="bit" />
+          <Property Name="RAPOR" Type="bit" />
+          <Property Name="TENANTID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KODU" Type="nvarchar(max)" />
+          <Property Name="SIFRESI" Type="nvarchar(max)" />
+          <Property Name="ADI" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'OBA_ELEKTRA.dbo.QMUH_SATINALMA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="QMUH_SATINALMA">
+          <Key>
+            <PropertyRef Name="TENANTID" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GERIGONDERILDI" />
+            <PropertyRef Name="TTARIHGECMIS" />
+          </Key>
+          <Property Name="TENANTID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TARIH" Type="datetime" />
+          <Property Name="STARIH" Type="datetime" />
+          <Property Name="SUBEID" Type="int" />
+          <Property Name="SUBEADI" Type="nvarchar" MaxLength="150" />
+          <Property Name="DEPOID" Type="int" />
+          <Property Name="DEPOADI" Type="nvarchar" MaxLength="40" />
+          <Property Name="USERID" Type="int" />
+          <Property Name="ADI" Type="nvarchar" MaxLength="30" />
+          <Property Name="DURUMID" Type="int" />
+          <Property Name="DURUMADI" Type="nvarchar" MaxLength="100" />
+          <Property Name="ENO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACIKLAMA" Type="nvarchar" MaxLength="250" />
+          <Property Name="EK1" Type="nvarchar" MaxLength="50" />
+          <Property Name="EK2" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPTAL" Type="bit" />
+          <Property Name="TRANSFERFISIKESILDI" Type="bit" />
+          <Property Name="STATUID" Type="int" />
+          <Property Name="STATUADI" Type="nvarchar" MaxLength="100" />
+          <Property Name="MERKEZIONAY" Type="bit" />
+          <Property Name="SONONAYACIKLAMA" Type="nvarchar" MaxLength="100" />
+          <Property Name="GERIGONDERILDI" Type="bit" Nullable="false" />
+          <Property Name="ONLINEDURUM" Type="nvarchar" MaxLength="72" />
+          <Property Name="TTARIHGECMIS" Type="int" Nullable="false" />
+          <Property Name="KALEMADET" Type="int" />
+          <Property Name="TOPLAMTUTAR" Type="float" />
+        </EntityType>
+        <EntityContainer Name="SatinAlmaContextStoreContainer">
+          <EntitySet Name="MUH_SATINALMA" EntityType="Self.MUH_SATINALMA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USER_TAKVIM" EntityType="Self.USER_TAKVIM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERD" EntityType="Self.USERD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QMUH_SATINALMA" EntityType="Self.QMUH_SATINALMA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [QMUH_SATINALMA].[TENANTID] AS [TENANTID], 
+    [QMUH_SATINALMA].[ID] AS [ID], 
+    [QMUH_SATINALMA].[TARIH] AS [TARIH], 
+    [QMUH_SATINALMA].[STARIH] AS [STARIH], 
+    [QMUH_SATINALMA].[SUBEID] AS [SUBEID], 
+    [QMUH_SATINALMA].[SUBEADI] AS [SUBEADI], 
+    [QMUH_SATINALMA].[DEPOID] AS [DEPOID], 
+    [QMUH_SATINALMA].[DEPOADI] AS [DEPOADI], 
+    [QMUH_SATINALMA].[USERID] AS [USERID], 
+    [QMUH_SATINALMA].[ADI] AS [ADI], 
+    [QMUH_SATINALMA].[DURUMID] AS [DURUMID], 
+    [QMUH_SATINALMA].[DURUMADI] AS [DURUMADI], 
+    [QMUH_SATINALMA].[ENO] AS [ENO], 
+    [QMUH_SATINALMA].[ACIKLAMA] AS [ACIKLAMA], 
+    [QMUH_SATINALMA].[EK1] AS [EK1], 
+    [QMUH_SATINALMA].[EK2] AS [EK2], 
+    [QMUH_SATINALMA].[IPTAL] AS [IPTAL], 
+    [QMUH_SATINALMA].[TRANSFERFISIKESILDI] AS [TRANSFERFISIKESILDI], 
+    [QMUH_SATINALMA].[STATUID] AS [STATUID], 
+    [QMUH_SATINALMA].[STATUADI] AS [STATUADI], 
+    [QMUH_SATINALMA].[MERKEZIONAY] AS [MERKEZIONAY], 
+    [QMUH_SATINALMA].[SONONAYACIKLAMA] AS [SONONAYACIKLAMA], 
+    [QMUH_SATINALMA].[GERIGONDERILDI] AS [GERIGONDERILDI], 
+    [QMUH_SATINALMA].[ONLINEDURUM] AS [ONLINEDURUM], 
+    [QMUH_SATINALMA].[TTARIHGECMIS] AS [TTARIHGECMIS], 
+    [QMUH_SATINALMA].[KALEMADET] AS [KALEMADET], 
+    [QMUH_SATINALMA].[TOPLAMTUTAR] AS [TOPLAMTUTAR]
+    FROM [dbo].[QMUH_SATINALMA] AS [QMUH_SATINALMA]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SatinAlmaContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KODU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ADI" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="GOREVI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEPT" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="SIFRESI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DIL" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="GRUBU" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ONBURO" Type="Int32" />
+          <Property Name="STOK" Type="Int32" />
+          <Property Name="SANTRAL" Type="Int32" />
+          <Property Name="POS" Type="Int32" />
+          <Property Name="WINTOM" Type="Int32" />
+          <Property Name="MUHASEBE" Type="Int32" />
+          <Property Name="YETKISI" Type="Int32" />
+          <Property Name="PERSONEL" Type="Int32" />
+          <Property Name="SKODU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="YGRUBU" Type="Boolean" />
+          <Property Name="RAPORLAR" Type="Int32" />
+          <Property Name="ETSGIRISIZNI" Type="Int32" />
+          <Property Name="SUBEID" Type="Int32" />
+          <Property Name="DEPOID" Type="Int32" />
+          <Property Name="ETS" Type="Int32" />
+          <Property Name="SATINALMA" Type="Int32" />
+          <Property Name="TICSET" Type="Int32" />
+          <Property Name="MEDISOFT" Type="Int32" />
+          <Property Name="YETKISIOTEL" Type="Int32" />
+          <Property Name="YETKISIPOS" Type="Int32" />
+          <Property Name="YETKISIETS" Type="Int32" />
+          <Property Name="YETKISIPERSONEL" Type="Int32" />
+          <Property Name="YETKISIMEDISOFT" Type="Int32" />
+          <Property Name="HAZIRLAMA" Type="Int32" />
+          <Property Name="KONTROLETME" Type="Int32" />
+          <Property Name="ONAYLAMA" Type="Int32" />
+          <Property Name="SATGOREV" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SIFRESIFRELI" Type="Boolean" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MUHONAY" Type="Int32" />
+          <Property Name="USERGRUPID" Type="Int32" />
+          <Property Name="SATINALMADURUM" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MASMERID" Type="Int32" />
+          <Property Name="SABAGIMSIZGERIGONDER" Type="Int32" />
+          <Property Name="TAKVIMKAYNAK" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="GELIRLERIGOREMEZ" Type="Boolean" />
+          <Property Name="DEPARTID" Type="Int32" />
+          <Property Name="SATINALMASTATU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COKLUCALISMA" Type="Int32" />
+          <Property Name="PDEPARTMANS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ETSISLEMLER" Type="Int32" />
+          <Property Name="ETSFATURA" Type="Int32" />
+          <Property Name="ETSDEMIRBAS" Type="Int32" />
+          <Property Name="ETSDEVREMULK" Type="Int32" />
+          <Property Name="ETSENTEGRASYON" Type="Int32" />
+          <Property Name="ETSSATISPAZARLAMA" Type="Int32" />
+          <Property Name="OTELMENU" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PASIF" Type="Boolean" />
+          <Property Name="EFATURA_KULLANICI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EFATURA_PAROLA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EARSIV_KULLANICI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EARSIV_PAROLA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SATINALMAMAXLIMIT" Type="Double" />
+          <Property Name="DEPOKODU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FIRMA" Type="Int32" />
+          <Property Name="FATURA" Type="Int32" />
+          <Property Name="TENANTID" Type="Int32" Nullable="false" />
+          <Property Name="ESIFRESI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MASRAFMERKEZLERI" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="OZELKODLAR" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="KOTAONAYCI" Type="Boolean" />
+          <Property Name="KOTASAHIBI" Type="Boolean" />
+          <Property Name="ADD_USERID" Type="Int32" />
+          <Property Name="ADD_DATE" Type="DateTime" Precision="3" />
+          <Property Name="EIRSALIYE_KULLANICI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EIRSALIYE_PAROLA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="USER_TAKVIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ActualFinish" Type="Int32" />
+          <Property Name="ActualStart" Type="Int32" />
+          <Property Name="Caption" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EventType" Type="Int32" />
+          <Property Name="Finish" Type="DateTime" Precision="3" />
+          <Property Name="LabelColor" Type="Int32" />
+          <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Options" Type="Int32" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="RecurrenceIndex" Type="Int32" />
+          <Property Name="RecurrenceInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ReminderDate" Type="DateTime" Precision="3" />
+          <Property Name="ReminderMinutesBeforeStart" Type="Int32" />
+          <Property Name="ReminderResourcesData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ResourceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Start" Type="DateTime" Precision="3" />
+          <Property Name="State" Type="Int32" />
+          <Property Name="TaskCompleteField" Type="Int32" />
+          <Property Name="TaskIndexField" Type="Int32" />
+          <Property Name="TaskLinksField" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TaskStatusField" Type="Int32" />
+          <Property Name="isNew" Type="Boolean" />
+          <Property Name="FirmaId" Type="Int32" />
+          <Property Name="ProjeId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="USERD">
+          <Key>
+            <PropertyRef Name="USERDID" />
+          </Key>
+          <Property Name="USERDID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="FGRUBU" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="KODU" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="FORM" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="GORUNTULE" Type="Boolean" />
+          <Property Name="LISTE" Type="Boolean" />
+          <Property Name="EKLE" Type="Boolean" />
+          <Property Name="YENILE" Type="Boolean" />
+          <Property Name="SIL" Type="Boolean" />
+          <Property Name="SEC" Type="Boolean" />
+          <Property Name="COGALT" Type="Boolean" />
+          <Property Name="YAZDIR" Type="Boolean" />
+          <Property Name="DETAY" Type="Boolean" />
+          <Property Name="RAPOR" Type="Boolean" />
+          <Property Name="TENANTID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KODU" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SIFRESI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ADI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="OBA_ELEKTRAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="USER" EntityType="Self.USER" />
+          <EntitySet Name="USER_TAKVIM" EntityType="Self.USER_TAKVIM" />
+          <EntitySet Name="USERD" EntityType="Self.USERD" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="MUH_SATINALMA" EntityType="SatinAlmaContext.MUH_SATINALMA" />
+          <EntitySet Name="QMUH_SATINALMA" EntityType="SatinAlmaContext.QMUH_SATINALMA" />
+        </EntityContainer>
+        <EntityType Name="MUH_SATINALMA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SUBEID" Type="Int32" />
+          <Property Name="TARIH" Type="DateTime" Precision="3" />
+          <Property Name="DEPOID" Type="Int32" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="ENO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="EK1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EK2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DURUMID" Type="Int32" />
+          <Property Name="IPTAL" Type="Boolean" />
+          <Property Name="KALEMADET" Type="Int32" />
+          <Property Name="TOPLAMTUTAR" Type="Double" />
+          <Property Name="TRANSFERFISIKESILDI" Type="Boolean" />
+          <Property Name="STATUID" Type="Int32" />
+          <Property Name="MERKEZIONAY" Type="Boolean" />
+          <Property Name="SONONAYACIKLAMA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="GERIGONDERILDI" Type="Boolean" />
+          <Property Name="DEPARTMANLAR" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="LIMITKONTROL" Type="Int32" />
+          <Property Name="TENANTID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QMUH_SATINALMA">
+          <Key>
+            <PropertyRef Name="TENANTID" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="GERIGONDERILDI" />
+            <PropertyRef Name="TTARIHGECMIS" />
+          </Key>
+          <Property Name="TENANTID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TARIH" Type="DateTime" Precision="3" />
+          <Property Name="STARIH" Type="DateTime" Precision="3" />
+          <Property Name="SUBEID" Type="Int32" />
+          <Property Name="SUBEADI" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="DEPOID" Type="Int32" />
+          <Property Name="DEPOADI" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="USERID" Type="Int32" />
+          <Property Name="ADI" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DURUMID" Type="Int32" />
+          <Property Name="DURUMADI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ENO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="EK1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EK2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPTAL" Type="Boolean" />
+          <Property Name="TRANSFERFISIKESILDI" Type="Boolean" />
+          <Property Name="STATUID" Type="Int32" />
+          <Property Name="STATUADI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MERKEZIONAY" Type="Boolean" />
+          <Property Name="SONONAYACIKLAMA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="GERIGONDERILDI" Type="Boolean" Nullable="false" />
+          <Property Name="ONLINEDURUM" Type="String" MaxLength="72" FixedLength="false" Unicode="true" />
+          <Property Name="TTARIHGECMIS" Type="Int32" Nullable="false" />
+          <Property Name="KALEMADET" Type="Int32" />
+          <Property Name="TOPLAMTUTAR" Type="Double" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SatinAlmaContextStoreContainer" CdmEntityContainer="OBA_ELEKTRAEntities">
+          <EntitySetMapping Name="USER">
+            <EntityTypeMapping TypeName="SatinAlmaContext.USER">
+              <MappingFragment StoreEntitySet="USER">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="KODU" ColumnName="KODU" />
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+                <ScalarProperty Name="GOREVI" ColumnName="GOREVI" />
+                <ScalarProperty Name="DEPT" ColumnName="DEPT" />
+                <ScalarProperty Name="SIFRESI" ColumnName="SIFRESI" />
+                <ScalarProperty Name="DIL" ColumnName="DIL" />
+                <ScalarProperty Name="GRUBU" ColumnName="GRUBU" />
+                <ScalarProperty Name="ONBURO" ColumnName="ONBURO" />
+                <ScalarProperty Name="STOK" ColumnName="STOK" />
+                <ScalarProperty Name="SANTRAL" ColumnName="SANTRAL" />
+                <ScalarProperty Name="POS" ColumnName="POS" />
+                <ScalarProperty Name="WINTOM" ColumnName="WINTOM" />
+                <ScalarProperty Name="MUHASEBE" ColumnName="MUHASEBE" />
+                <ScalarProperty Name="YETKISI" ColumnName="YETKISI" />
+                <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
+                <ScalarProperty Name="SKODU" ColumnName="SKODU" />
+                <ScalarProperty Name="YGRUBU" ColumnName="YGRUBU" />
+                <ScalarProperty Name="RAPORLAR" ColumnName="RAPORLAR" />
+                <ScalarProperty Name="ETSGIRISIZNI" ColumnName="ETSGIRISIZNI" />
+                <ScalarProperty Name="SUBEID" ColumnName="SUBEID" />
+                <ScalarProperty Name="DEPOID" ColumnName="DEPOID" />
+                <ScalarProperty Name="ETS" ColumnName="ETS" />
+                <ScalarProperty Name="SATINALMA" ColumnName="SATINALMA" />
+                <ScalarProperty Name="TICSET" ColumnName="TICSET" />
+                <ScalarProperty Name="MEDISOFT" ColumnName="MEDISOFT" />
+                <ScalarProperty Name="YETKISIOTEL" ColumnName="YETKISIOTEL" />
+                <ScalarProperty Name="YETKISIPOS" ColumnName="YETKISIPOS" />
+                <ScalarProperty Name="YETKISIETS" ColumnName="YETKISIETS" />
+                <ScalarProperty Name="YETKISIPERSONEL" ColumnName="YETKISIPERSONEL" />
+                <ScalarProperty Name="YETKISIMEDISOFT" ColumnName="YETKISIMEDISOFT" />
+                <ScalarProperty Name="HAZIRLAMA" ColumnName="HAZIRLAMA" />
+                <ScalarProperty Name="KONTROLETME" ColumnName="KONTROLETME" />
+                <ScalarProperty Name="ONAYLAMA" ColumnName="ONAYLAMA" />
+                <ScalarProperty Name="SATGOREV" ColumnName="SATGOREV" />
+                <ScalarProperty Name="SIFRESIFRELI" ColumnName="SIFRESIFRELI" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="MUHONAY" ColumnName="MUHONAY" />
+                <ScalarProperty Name="USERGRUPID" ColumnName="USERGRUPID" />
+                <ScalarProperty Name="SATINALMADURUM" ColumnName="SATINALMADURUM" />
+                <ScalarProperty Name="MASMERID" ColumnName="MASMERID" />
+                <ScalarProperty Name="SABAGIMSIZGERIGONDER" ColumnName="SABAGIMSIZGERIGONDER" />
+                <ScalarProperty Name="TAKVIMKAYNAK" ColumnName="TAKVIMKAYNAK" />
+                <ScalarProperty Name="GELIRLERIGOREMEZ" ColumnName="GELIRLERIGOREMEZ" />
+                <ScalarProperty Name="DEPARTID" ColumnName="DEPARTID" />
+                <ScalarProperty Name="SATINALMASTATU" ColumnName="SATINALMASTATU" />
+                <ScalarProperty Name="COKLUCALISMA" ColumnName="COKLUCALISMA" />
+                <ScalarProperty Name="PDEPARTMANS" ColumnName="PDEPARTMANS" />
+                <ScalarProperty Name="ETSISLEMLER" ColumnName="ETSISLEMLER" />
+                <ScalarProperty Name="ETSFATURA" ColumnName="ETSFATURA" />
+                <ScalarProperty Name="ETSDEMIRBAS" ColumnName="ETSDEMIRBAS" />
+                <ScalarProperty Name="ETSDEVREMULK" ColumnName="ETSDEVREMULK" />
+                <ScalarProperty Name="ETSENTEGRASYON" ColumnName="ETSENTEGRASYON" />
+                <ScalarProperty Name="ETSSATISPAZARLAMA" ColumnName="ETSSATISPAZARLAMA" />
+                <ScalarProperty Name="OTELMENU" ColumnName="OTELMENU" />
+                <ScalarProperty Name="PASIF" ColumnName="PASIF" />
+                <ScalarProperty Name="EFATURA_KULLANICI" ColumnName="EFATURA_KULLANICI" />
+                <ScalarProperty Name="EFATURA_PAROLA" ColumnName="EFATURA_PAROLA" />
+                <ScalarProperty Name="EARSIV_KULLANICI" ColumnName="EARSIV_KULLANICI" />
+                <ScalarProperty Name="EARSIV_PAROLA" ColumnName="EARSIV_PAROLA" />
+                <ScalarProperty Name="SATINALMAMAXLIMIT" ColumnName="SATINALMAMAXLIMIT" />
+                <ScalarProperty Name="DEPOKODU" ColumnName="DEPOKODU" />
+                <ScalarProperty Name="FIRMA" ColumnName="FIRMA" />
+                <ScalarProperty Name="FATURA" ColumnName="FATURA" />
+                <ScalarProperty Name="TENANTID" ColumnName="TENANTID" />
+                <ScalarProperty Name="ESIFRESI" ColumnName="ESIFRESI" />
+                <ScalarProperty Name="MASRAFMERKEZLERI" ColumnName="MASRAFMERKEZLERI" />
+                <ScalarProperty Name="OZELKODLAR" ColumnName="OZELKODLAR" />
+                <ScalarProperty Name="KOTAONAYCI" ColumnName="KOTAONAYCI" />
+                <ScalarProperty Name="KOTASAHIBI" ColumnName="KOTASAHIBI" />
+                <ScalarProperty Name="ADD_USERID" ColumnName="ADD_USERID" />
+                <ScalarProperty Name="ADD_DATE" ColumnName="ADD_DATE" />
+                <ScalarProperty Name="EIRSALIYE_KULLANICI" ColumnName="EIRSALIYE_KULLANICI" />
+                <ScalarProperty Name="EIRSALIYE_PAROLA" ColumnName="EIRSALIYE_PAROLA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USER_TAKVIM">
+            <EntityTypeMapping TypeName="SatinAlmaContext.USER_TAKVIM">
+              <MappingFragment StoreEntitySet="USER_TAKVIM">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ActualFinish" ColumnName="ActualFinish" />
+                <ScalarProperty Name="ActualStart" ColumnName="ActualStart" />
+                <ScalarProperty Name="Caption" ColumnName="Caption" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="Finish" ColumnName="Finish" />
+                <ScalarProperty Name="LabelColor" ColumnName="LabelColor" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Options" ColumnName="Options" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="RecurrenceIndex" ColumnName="RecurrenceIndex" />
+                <ScalarProperty Name="RecurrenceInfo" ColumnName="RecurrenceInfo" />
+                <ScalarProperty Name="ReminderDate" ColumnName="ReminderDate" />
+                <ScalarProperty Name="ReminderMinutesBeforeStart" ColumnName="ReminderMinutesBeforeStart" />
+                <ScalarProperty Name="ReminderResourcesData" ColumnName="ReminderResourcesData" />
+                <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="TaskCompleteField" ColumnName="TaskCompleteField" />
+                <ScalarProperty Name="TaskIndexField" ColumnName="TaskIndexField" />
+                <ScalarProperty Name="TaskLinksField" ColumnName="TaskLinksField" />
+                <ScalarProperty Name="TaskStatusField" ColumnName="TaskStatusField" />
+                <ScalarProperty Name="isNew" ColumnName="isNew" />
+                <ScalarProperty Name="FirmaId" ColumnName="FirmaId" />
+                <ScalarProperty Name="ProjeId" ColumnName="ProjeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERD">
+            <EntityTypeMapping TypeName="SatinAlmaContext.USERD">
+              <MappingFragment StoreEntitySet="USERD">
+                <ScalarProperty Name="USERDID" ColumnName="USERDID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="FGRUBU" ColumnName="FGRUBU" />
+                <ScalarProperty Name="KODU" ColumnName="KODU" />
+                <ScalarProperty Name="FORM" ColumnName="FORM" />
+                <ScalarProperty Name="GORUNTULE" ColumnName="GORUNTULE" />
+                <ScalarProperty Name="LISTE" ColumnName="LISTE" />
+                <ScalarProperty Name="EKLE" ColumnName="EKLE" />
+                <ScalarProperty Name="YENILE" ColumnName="YENILE" />
+                <ScalarProperty Name="SIL" ColumnName="SIL" />
+                <ScalarProperty Name="SEC" ColumnName="SEC" />
+                <ScalarProperty Name="COGALT" ColumnName="COGALT" />
+                <ScalarProperty Name="YAZDIR" ColumnName="YAZDIR" />
+                <ScalarProperty Name="DETAY" ColumnName="DETAY" />
+                <ScalarProperty Name="RAPOR" ColumnName="RAPOR" />
+                <ScalarProperty Name="TENANTID" ColumnName="TENANTID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="SatinAlmaContext.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="KODU" ColumnName="KODU" />
+                <ScalarProperty Name="SIFRESI" ColumnName="SIFRESI" />
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MUH_SATINALMA">
+            <EntityTypeMapping TypeName="SatinAlmaContext.MUH_SATINALMA">
+              <MappingFragment StoreEntitySet="MUH_SATINALMA">
+                <ScalarProperty Name="TENANTID" ColumnName="TENANTID" />
+                <ScalarProperty Name="LIMITKONTROL" ColumnName="LIMITKONTROL" />
+                <ScalarProperty Name="DEPARTMANLAR" ColumnName="DEPARTMANLAR" />
+                <ScalarProperty Name="GERIGONDERILDI" ColumnName="GERIGONDERILDI" />
+                <ScalarProperty Name="SONONAYACIKLAMA" ColumnName="SONONAYACIKLAMA" />
+                <ScalarProperty Name="MERKEZIONAY" ColumnName="MERKEZIONAY" />
+                <ScalarProperty Name="STATUID" ColumnName="STATUID" />
+                <ScalarProperty Name="TRANSFERFISIKESILDI" ColumnName="TRANSFERFISIKESILDI" />
+                <ScalarProperty Name="TOPLAMTUTAR" ColumnName="TOPLAMTUTAR" />
+                <ScalarProperty Name="KALEMADET" ColumnName="KALEMADET" />
+                <ScalarProperty Name="IPTAL" ColumnName="IPTAL" />
+                <ScalarProperty Name="DURUMID" ColumnName="DURUMID" />
+                <ScalarProperty Name="EK2" ColumnName="EK2" />
+                <ScalarProperty Name="EK1" ColumnName="EK1" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="ENO" ColumnName="ENO" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="DEPOID" ColumnName="DEPOID" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="SUBEID" ColumnName="SUBEID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QMUH_SATINALMA">
+            <EntityTypeMapping TypeName="SatinAlmaContext.QMUH_SATINALMA">
+              <MappingFragment StoreEntitySet="QMUH_SATINALMA">
+                <ScalarProperty Name="TOPLAMTUTAR" ColumnName="TOPLAMTUTAR" />
+                <ScalarProperty Name="KALEMADET" ColumnName="KALEMADET" />
+                <ScalarProperty Name="TTARIHGECMIS" ColumnName="TTARIHGECMIS" />
+                <ScalarProperty Name="ONLINEDURUM" ColumnName="ONLINEDURUM" />
+                <ScalarProperty Name="GERIGONDERILDI" ColumnName="GERIGONDERILDI" />
+                <ScalarProperty Name="SONONAYACIKLAMA" ColumnName="SONONAYACIKLAMA" />
+                <ScalarProperty Name="MERKEZIONAY" ColumnName="MERKEZIONAY" />
+                <ScalarProperty Name="STATUADI" ColumnName="STATUADI" />
+                <ScalarProperty Name="STATUID" ColumnName="STATUID" />
+                <ScalarProperty Name="TRANSFERFISIKESILDI" ColumnName="TRANSFERFISIKESILDI" />
+                <ScalarProperty Name="IPTAL" ColumnName="IPTAL" />
+                <ScalarProperty Name="EK2" ColumnName="EK2" />
+                <ScalarProperty Name="EK1" ColumnName="EK1" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="ENO" ColumnName="ENO" />
+                <ScalarProperty Name="DURUMADI" ColumnName="DURUMADI" />
+                <ScalarProperty Name="DURUMID" ColumnName="DURUMID" />
+                <ScalarProperty Name="ADI" ColumnName="ADI" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="DEPOADI" ColumnName="DEPOADI" />
+                <ScalarProperty Name="DEPOID" ColumnName="DEPOID" />
+                <ScalarProperty Name="SUBEADI" ColumnName="SUBEADI" />
+                <ScalarProperty Name="SUBEID" ColumnName="SUBEID" />
+                <ScalarProperty Name="STARIH" ColumnName="STARIH" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TENANTID" ColumnName="TENANTID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

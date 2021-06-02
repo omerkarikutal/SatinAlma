@@ -1,0 +1,47 @@
+﻿@model List<QMUH_SATINALMA>
+
+<div class="col-12">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title">Always responsive</h5>
+            <h6 class="card-subtitle text-muted">Across every breakpoint, use <code>.table-responsive</code> for horizontally scrolling tables.</h6>
+        </div>
+        <div class="table-responsive">
+            <table class="table mb-0">
+                <thead>
+                    <tr>
+                        @*<th scope="col">Id</th>*@
+                        <th scope="col">Tarih</th>
+                        <th scope="col">Depo</th>
+                        <th scope="col">Talep Eden</th>
+                        <th scope="col">Depo Id</th>
+                        <th scope="col">Durumu</th>
+                        <th scope="col">Toplam</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            @*<td>
+                                @Model[i].ID
+                            </td>*@
+                            <td>@Model[i].TARIH.Value.ToString("dd-MM-yyyy")</td>
+                            <td>@Model[i].DEPOADI</td>
+                            <td>@Model[i].ADI</td>
+                            <td>@Model[i].DEPOID</td>
+                            <td>@Model[i].DURUMADI</td>
+                            <td>@Model[i].TOPLAMTUTAR</td>
+                            <td>
+                                <button class="btn btn-success btn-sm">Gör</button>
+                                <button class="btn btn-danger btn-sm">İptal</button>
+                                <button class="btn btn-info btn-sm">Onayla</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
